@@ -23,6 +23,7 @@ export interface Issue {
 interface GithubProfileContext {
   user: GithubProfile
   issues: Issue[]
+  searchIssues: (query: string) => Promise<void>
 }
 
 interface GithubProvider {
@@ -49,13 +50,23 @@ export function GithubProvider({ children }: GithubProvider) {
     setIssues(response.data.items)
   }
 
+  async function searchIssues(query?: string) {
+    const response = await api.get('/search/issues', {
+      params: {
+        q: `${query} repo:omarcosallan/github-blog`,
+      },
+    })
+
+    setIssues(response.data.items)
+  }
+
   useEffect(() => {
     fetchProfile()
     fetchIssues()
   }, [])
 
   return (
-    <GithubContext.Provider value={{ user, issues }}>
+    <GithubContext.Provider value={{ user, issues, searchIssues }}>
       {children}
     </GithubContext.Provider>
   )

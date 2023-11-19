@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
-import { PostInfo } from './components/PostInfo'
+import { PostInfo } from './components/CardProfile'
 import { Issue } from '../../context/GithubContext'
 import { api } from '../../lib/axios'
 

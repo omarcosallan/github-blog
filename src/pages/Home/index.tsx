@@ -4,6 +4,7 @@ import { CardIssue } from './components/CardIssues'
 import { CardProfile } from './components/CardProfile'
 
 import { HomeContainer, IssuesList } from './styles'
+import { SearchInput } from './components/SearchInputs'
 
 export function Home() {
   const { issues } = useContext(GithubContext)
@@ -11,6 +12,8 @@ export function Home() {
   return (
     <HomeContainer>
       <CardProfile />
+
+      <SearchInput postsLength={issues.length} />
 
       <IssuesList>
         {issues.map((issue) => {

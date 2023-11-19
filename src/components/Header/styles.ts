@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import headerBg from '../../assets/bg-header.svg'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -7,5 +8,7 @@ export const HeaderContainer = styled.header`
 
   height: 18.5rem;
   padding-top: 4rem;
-  background: ${(props) => props.theme['base-profile']};
+
+  background: url(${headerBg}) no-repeat center;
+  background-size: cover;
 `
