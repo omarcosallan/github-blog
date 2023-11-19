@@ -22,7 +22,7 @@ export function PostInfo({ issue }: IssueInfoProps) {
   const createdAt = formatDistanceToNow(new Date(issue.created_at), {
     addSuffix: true,
     locale: ptBR,
-  }).replace('há cerca de', 'Há')
+  })
 
   return (
     <CardProfileContainer>

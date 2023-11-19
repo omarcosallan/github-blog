@@ -8,32 +8,33 @@ export const PostContentContainer = styled.div`
   color: ${(props) => props.theme['base-text']};
   line-height: 160%;
 
-  > img {
+  img {
     width: 100%;
   }
 
-  > h1,
-  > h2,
-  > h3 {
+  h1,
+  h2,
+  h3 {
     color: ${(props) => props.theme['base-title']};
 
     padding-top: 0.625rem;
     margin-bottom: 1rem;
   }
 
-  > strong {
+  strong {
     font-weight: 700;
   }
 
-  > p {
+  p {
     margin-bottom: 1.875rem;
   }
 
-  > ul {
+  ul {
     padding-left: 1.5rem;
+    margin-bottom: 1.875rem;
   }
 
-  > a {
+  a {
     color: ${(props) => props.theme.blue};
     text-decoration: none;
 
@@ -42,7 +43,7 @@ export const PostContentContainer = styled.div`
     }
   }
 
-  > pre {
+  pre {
     background: ${(props) => props.theme['base-post']};
     padding: 1.25rem;
     margin-bottom: 1.875rem;
@@ -58,7 +59,7 @@ export const PostContentContainer = styled.div`
     }
   }
 
-  > blockquote {
+  blockquote {
     letter-spacing: 0.3px;
     line-height: 1.6;
     font-size: 1.25rem;

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { GithubContext } from '../../context/GithubContext'
 import { CardIssue } from './components/CardIssues'
-import { CardProfile } from './components/CardProfile'
+import { CardInfoIssues } from './components/CardInfoIssues'
 
 import { HomeContainer, IssuesList } from './styles'
 import { SearchInput } from './components/SearchInputs'
@@ -11,7 +11,7 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <CardProfile />
+      <CardInfoIssues />
 
       <SearchInput postsLength={issues.length} />
 

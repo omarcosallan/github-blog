@@ -15,7 +15,7 @@ import {
 } from './styles'
 import { ExternalLink } from '../../../../components/ExternalLink'
 
-export function CardProfile() {
+export function CardInfoIssues() {
   const { user } = useContext(GithubContext)
 
   return (

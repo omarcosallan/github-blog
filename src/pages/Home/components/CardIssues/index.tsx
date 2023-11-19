@@ -1,7 +1,7 @@
 import { Issue } from '../../../../context/GithubContext'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
-import ReactMarkdown from 'react-markdown'
+import Markdown from 'react-markdown'
 
 import { CardIssuesContainer, Content } from './styles'
 
@@ -10,19 +10,25 @@ interface CardIssueProps {
 }
 
 export function CardIssue({ issue }: CardIssueProps) {
-  const createdAt = formatDistanceToNow(new Date(issue.created_at), {
-    addSuffix: true,
-    locale: ptBR,
-  }).replace('há cerca de', 'Há')
+  function distanceToNow() {
+    const distance = formatDistanceToNow(new Date(issue.created_at), {
+      addSuffix: false,
+      locale: ptBR,
+    })
+
+    return `Há ${distance}`.replace('cerca de ', '')
+  }
+
+  const distance = distanceToNow()
 
   return (
     <CardIssuesContainer to={`post/${issue.number}`}>
       <header>
         <strong title={issue.title}>{issue.title}</strong>
-        <p title={createdAt}>{createdAt}</p>
+        <p title={distance}>{distance}</p>
       </header>
       <Content>
-        <ReactMarkdown>{issue.body}</ReactMarkdown>
+        <Markdown skipHtml={true}>{issue.body}</Markdown>
       </Content>
     </CardIssuesContainer>
   )

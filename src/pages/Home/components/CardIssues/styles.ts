@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const CardIssuesContainer = styled(NavLink)`
+export const CardIssuesContainer = styled(Link)`
   background: ${(props) => props.theme['base-post']};
   border-radius: 10px;
   border: 2px solid transparent;
@@ -14,6 +14,8 @@ export const CardIssuesContainer = styled(NavLink)`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    gap: 1rem;
     color: ${(props) => props.theme['base-title']};
 
     > strong {
