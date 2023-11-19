@@ -5,4 +5,8 @@ export const PostContainer = styled.div`
   margin: 0 auto;
 
   margin-bottom: 8rem;
+
+  @media (max-width: 890px) {
+    padding: 1rem;
+  }
 `

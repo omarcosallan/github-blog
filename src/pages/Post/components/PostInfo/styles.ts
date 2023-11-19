@@ -29,7 +29,8 @@ export const InfoIssue = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
   margin-top: 0.5rem;
 
   p {

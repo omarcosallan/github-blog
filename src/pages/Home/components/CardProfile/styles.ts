@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const CardProfileContainer = styled.div`
   display: flex;
+  flex-direction: row;
   padding: 2rem;
   gap: 2rem;
   background: ${(props) => props.theme['base-profile']};
@@ -21,6 +22,10 @@ export const CardProfileContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `
 
@@ -78,6 +83,9 @@ export const InfoGithub = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 
   p {
     display: flex;

@@ -8,12 +8,18 @@ interface PostContentProps {
   content: string
 }
 
+interface CodeProps {
+  inline?: boolean
+  className?: string
+  children?: React.ReactNode
+}
+
 export function PostContent({ content }: PostContentProps) {
   return (
     <PostContentContainer>
       <Markdown
         components={{
-          code({ inline, className, children, ...props }) {
+          code({ inline, className, children, ...props }: CodeProps) {
             const match = /language-(\w+)/.exec(className || '')
 
             return !inline && match ? (

@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const CardIssuesContainer = styled(NavLink)`
-  width: 100%;
   background: ${(props) => props.theme['base-post']};
   border-radius: 10px;
   border: 2px solid transparent;
@@ -17,9 +16,8 @@ export const CardIssuesContainer = styled(NavLink)`
     justify-content: space-between;
     color: ${(props) => props.theme['base-title']};
 
-    max-height: 4rem;
-
     > strong {
+      flex: 1;
       font-size: 1.25rem;
       line-height: 160%;
 
@@ -31,10 +29,13 @@ export const CardIssuesContainer = styled(NavLink)`
     }
 
     > p {
-      min-width: max-content;
       font-size: 0.875rem;
       font-weight: 400;
       color: ${(props) => props.theme['base-span']};
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
     }
   }
 
@@ -44,7 +45,6 @@ export const CardIssuesContainer = styled(NavLink)`
 `
 
 export const Content = styled.div`
-  max-height: 7rem;
   margin-top: 1.25rem;
   color: ${(props) => props.theme['base-text']};
 
