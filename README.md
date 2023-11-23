@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Github Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+   Nesse desafio foi desenvolvida uma aplicação que utilizará da API do GitHub para buscar issues de um repositório, dados do seu perfil e exibir elas como um blog.
+</p>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## :information_source: Como Executar?
 
-## Expanding the ESLint configuration
+> Clone o Repositório:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/omarcosallan/github-blog.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+> Instale as dependências:
+
+```bash
+npm i
+```
+
+> Inicie o Serviço:
+
+```bash
+npm run dev
+```
+
+> ➡️ Acesse [http://localhost:5173](http://localhost:5173) para acessar a aplicação web.
+
+## ℹ️ Funcionalidades:
+- Listagem do seu perfil com imagem, número de seguidores, nome e outras informações disponíveis pela API do GitHub.
+- Listar e filtrar todas as issues do repositório com um pequeno resumo do conteúdo dela
+- Criar uma página para exibir um post (issue) completo
+
+> ➡️ Acesse [[http://localhost:5173](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1)]([http://localhost:5173](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1)) para mais informações sobre o projeto.
+
+### 🚀 Conceitos utilizados:
+- Fetch / Axios
+- Roteamento e React Router DOM
+- Formulários
