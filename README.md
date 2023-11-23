@@ -32,7 +32,7 @@ npm run dev
 - Listar e filtrar todas as issues do repositório com um pequeno resumo do conteúdo dela
 - Criar uma página para exibir um post (issue) completo
 
-> ➡️ Acesse [[http://localhost:5173](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1)]([http://localhost:5173](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1)) para mais informações sobre o projeto.
+> ➡️ Acesse ([https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1)) para mais informações sobre o projeto.
 
 ### 🚀 Conceitos utilizados:
 - Fetch / Axios
